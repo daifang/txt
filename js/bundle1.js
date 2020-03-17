@@ -28,4 +28,36 @@ document.getElementById('usertel').onchange = function(){
 
 //验证用户名是否正确
 
+document.getElementById('username').onchange = function(){
+    username = document.getElementById('username').value;
+    console.log(username.length);
+    if(username.length <=3){
+        document.getElementById('usernameTest').innerHTML = '*该用户名太短';
+        document.getElementById('usernameTest').classList.remove('unshow');
+        document.getElementById('usernameTest').classList.add('show');
+    }else if(username.length >3){
+        // console.log(username.length);
+        for(var j = 0;j < username.length; j++){
+            if(/[0-9]/.test(username.charAt(j))){
+                document.getElementById('usernameTest').innerHTML = '*用户名不能全是数字';
+                document.getElementById('usernameTest').classList.remove('unshow');
+                document.getElementById('usernameTest').classList.add('show');
+                return false;
+            }else{
+                document.getElementById('usernameTest').classList.remove('show');
+                document.getElementById('usernameTest').classList.add('unshow');
+                return true;
+            }
+        }
+    }else{
+        document.getElementById('usernameTest').classList.remove('show');
+        document.getElementById('usernameTest').classList.add('unshow');
+    }
+
+}
+
 //密码验证
+
+document.getElementById('password').onchange = function(){
+
+}
