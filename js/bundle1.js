@@ -60,7 +60,7 @@ document.getElementById('username').onchange = function(){
 
 document.getElementById('password').onchange = function(){
     password = document.getElementById('password').value;
-    if(password.length <=8 && password.length >0){
+    if(password.length < 8 && password.length >0){
         document.getElementById('passwordTest').innerHTML = '*密码最少8个字符';
         document.getElementById('passwordTest').classList.remove('unshow');
         document.getElementById('passwordTest').classList.add('show');
