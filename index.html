@@ -5,43 +5,110 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--build:css css/bundle.min.css-->
     <link rel="stylesheet" href="./css/bundle.css">
+    <link rel="stylesheet" href="./css/animate.css">
     <!--endbuild-->
     <title>百度注册</title>
 </head>
 <body>
-    <div id="bg"></div>
-    <div id="title">
-        <h1>用科技</h1>
-        <p>让复杂的世界更简单</p>
-    </div>
-    <div id="form">
-        <h1>欢迎注册</h1>
-        <p>已有账号?<a href="">注册</a></p>
-        <div>
-            <span>用户名 </span>
-            <input type="text" name="username" id="username"/>
-            <p id="usernameTest" class="unshow">*用户名非法</p>
+    <div id="container">
+        <div id="header">
+            <ul class="one">
+                <li class="oneMenu">文件
+                    <ul class="two">
+                        <li class="twoMenu">新建</li>
+                        <li class="twoMenu">新窗口</li>
+                        <li class="twoMenu">打开</li>
+                        <li class="twoMenu">保存</li>
+                        <li class="twoMenu">另存为</li>
+                        <li class="twoMenu">页面设置</li>
+                        <li class="twoMenu">打印</li>
+                        <li class="twoMenu">退出</li>
+                    </ul>
+                </li>
+                <li class="oneMenu">编辑
+                    <ul class="two">
+                        <li class="twoMenu">撤销</li>
+                        <li class="twoMenu">粘贴</li>
+                        <li class="twoMenu">复制</li>
+                        <li class="twoMenu">删除</li>
+                        <li class="twoMenu">剪切</li>
+                        <li class="twoMenu">查找</li>
+                    </ul>
+                </li>
+                <li class="oneMenu">格式
+                    <ul class="two">
+                        <li class="twoMenu">自动换行</li>
+                        <li class="twoMenu" id="font">字体</li>
+                    </ul>
+                </li>
+                <li class="oneMenu">查看
+                    <ul class="two">
+                        <li class="twoMenu">缩放</li>
+                        <li class="twoMenu">状态栏</li>
+                    </ul>
+                </li>
+                <li class="oneMenu">帮助
+                    <ul class="two">
+                        <li class="twoMenu">查看帮助</li>
+                        <li class="twoMenu">发送反馈</li>
+                        <li class="twoMenu">关于</li>
+                    </ul>
+                </li>
+            </ul>
         </div>
-        <div>
-            <span>手机号 </span>
-            <input type="tel" name="usertel" id="usertel"/>
-            <p id="usertelTest" class="unshow">*手机号不符合规范</p>
-        </div>
-        <div>
-            <span>密码</span>
-            <input type="password" name="password" id="password"/>
-            <p id="passwordTest" class="unshow">*密码不规范</p>
-        </div>
-        <div>
-            <span>验证码</span>
-            <input type="text" name="check" style="width: 30%;float: left;margin-left: 10%;"/>
-            <input type="button" name="btn" id="btn" style="width:30%;float: left;margin-left: 1%;border-radius: 5;height: 120%;cursor: pointer;" value="获取验证码;"/>
-            <p id="checkTest" class="unshow">*请填写手机号</p>
+        <div contenteditable="true" id="edit"></div>
+        <div id = "fontSetting">
+            <div class="header">字体
+                <input type="button" value="x" id="close"/>
+            </div>
+            <div class="container-little" style="width: 35%;">
+                <div class="header-little">字体</div>
+                <div class="setting">
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container-little" style="width: 35%;">
+                <div class="header-little">字形</div>
+                <div class="setting">
+                    <ul>
+                        <li class="fontStyle">加粗</li>
+                        <li class="fontStyle">倾斜</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container-little" style="width: 10%;">
+                <div class="header-little">大小</div>
+                <div class="setting" style="overflow-y: scroll;">
+                    <ul>
+                        <li class="fontSize">8</li>
+                        <li class="fontSize">9</li>
+                        <li class="fontSize">10</li>
+                        <li class="fontSize">11</li>
+                        <li class="fontSize">12</li>
+                        <li class="fontSize">14</li>
+                        <li class="fontSize">16</li>
+                        <li class="fontSize">18</li>
+                        <li class="fontSize">20</li>
+                        <li class="fontSize">22</li>
+                        <li class="fontSize">24</li>
+                        <li class="fontSize">26</li>
+                        <li class="fontSize">28</li>
+                        <li class="fontSize">36</li>
+                        <li class="fontSize">48</li>
+                        <li class="fontSize">72</li>
+                    </ul>
+                </div>
+            </div>
+            <input type="button" value="确定" id="confirm"/>
         </div>
     </div>
     <!--build:js js/bundle.min.js -->
-    <script src="./js/bundle.js"></script>
-    <script src="./js/bundle1.js"></script>
+    <script src="./js/bundle2.js"></script>
     <!-- endbuild -->
 </body>
 </html>
