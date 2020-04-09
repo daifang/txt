@@ -10,10 +10,10 @@
                 }
                 d.getElementsByClassName('two')[i].style.display = 'block';
                 d.getElementsByClassName('oneMenu')[i].classList.add('active');
-            })
+            });
         })(i)
         d.getElementById('edit').onfocus = function(){
-            for (let i = 0; i < one.length; i++) {
+            for (var i = 0; i < one.length; i++) {
                 d.getElementsByClassName('two')[i].style.display = 'none';
                 d.getElementsByClassName('oneMenu')[i].classList.remove('active');
             }
@@ -27,10 +27,10 @@
     };
     d.getElementById('close').onclick = function(){
         d.getElementById('fontSetting').classList.add('fadeOut');
-        setTimeout(()=>{
+        setTimeout(function(){
             d.getElementById('fontSetting').style.display = 'none';
-        },1000)
-    }
+        },1000);
+    };
     //字号大小
     var fontSize = d.getElementsByClassName('fontSize');
     for(var i = 0;i<fontSize.length;i++){
@@ -41,7 +41,7 @@
             this.classList.add('active');
             //字号
             font.fontSize = this.innerHTML;
-        }
+        };
     }
     //字形
     var fontStyle = d.getElementsByClassName('fontStyle');
@@ -57,15 +57,15 @@
             console.log(this.innerHTML);
             font.fontStyle = fontObj[this.innerHTML];
             font.fontWeight = fontObj[this.innerHTML];
-        }
-    }
+        };
+    };
     d.getElementById('confirm').onclick = function(){
         d.getElementById('edit').style.fontSize = font.fontSize + 'px';
         d.getElementById('edit').style.fontStyle = font.fontStyle;
         d.getElementById('edit').style.fontWeight = font.fontWeight;
         d.getElementById('fontSetting').classList.add('fadeOut');
-        setTimeout(()=>{
+        setTimeout(function(){
             d.getElementById('fontSetting').style.display = 'none';
-        },1000)
+        },1000);
     };
 })(document)

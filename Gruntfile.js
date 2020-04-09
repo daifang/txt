@@ -1,11 +1,5 @@
 module.exports = function (grunt) {
   grunt.initConfig({
-    jshint: {
-      all: 'js/*.js',
-      options: {
-        jshintrc: true
-      } 
-    },
     copy: {
       html: {
         src: './index.html',
@@ -39,13 +33,12 @@ module.exports = function (grunt) {
     }
     // clean: ['dist', 'package-lock.json', '.tmp']
   });
-  grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-copy');
   // grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-usemin');
-  grunt.registerTask('default', ['copy:html', 'jshint', 'useminPrepare', 'concat', 'uglify', 'cssmin', 'usemin']);
+  grunt.registerTask('default', ['copy:html', 'useminPrepare', 'concat', 'uglify', 'cssmin', 'usemin']);
   // grunt.registerTask('clean-all', ['clean']);
 };
