@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bundle.min.css">
+    <title>记事本</title>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <ul class="one">
+                <li class="oneMenu">文件
+                    <ul class="two">
+                        <li class="twoMenu">新建</li>
+                        <li class="twoMenu">新窗口</li>
+                        <li class="twoMenu">打开</li>
+                        <li class="twoMenu">保存</li>
+                        <li class="twoMenu">另存为</li>
+                        <li class="twoMenu">页面设置</li>
+                        <li class="twoMenu">打印</li>
+                        <li class="twoMenu">退出</li>
+                    </ul>
+                </li>
+                <li class="oneMenu">编辑
+                    <ul class="two">
+                        <li class="twoMenu">撤销</li>
+                        <li class="twoMenu">粘贴</li>
+                        <li class="twoMenu">复制</li>
+                        <li class="twoMenu">删除</li>
+                        <li class="twoMenu">剪切</li>
+                        <li class="twoMenu">查找</li>
+                    </ul>
+                </li>
+                <li class="oneMenu">格式
+                    <ul class="two">
+                        <li class="twoMenu">自动换行</li>
+                        <li class="twoMenu" id="font">字体</li>
+                    </ul>
+                </li>
+                <li class="oneMenu">查看
+                    <ul class="two">
+                        <li class="twoMenu">缩放</li>
+                        <li class="twoMenu">状态栏</li>
+                    </ul>
+                </li>
+                <li class="oneMenu">帮助
+                    <ul class="two">
+                        <li class="twoMenu">查看帮助</li>
+                        <li class="twoMenu">发送反馈</li>
+                        <li class="twoMenu">关于</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div contenteditable="true" id="edit"></div>
+        <div id = "fontSetting">
+            <div class="header">字体
+                <input type="button" value="x" id="close"/>
+            </div>
+            <div class="container-little" style="width: 35%;">
+                <div class="header-little">字体</div>
+                <div class="setting">
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container-little" style="width: 35%;">
+                <div class="header-little">字形</div>
+                <div class="setting">
+                    <ul>
+                        <li class="fontStyle">加粗</li>
+                        <li class="fontStyle">倾斜</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container-little" style="width: 10%;">
+                <div class="header-little">大小</div>
+                <div class="setting" style="overflow-y: scroll;">
+                    <ul>
+                        <li class="fontSize">8</li>
+                        <li class="fontSize">9</li>
+                        <li class="fontSize">10</li>
+                        <li class="fontSize">11</li>
+                        <li class="fontSize">12</li>
+                        <li class="fontSize">14</li>
+                        <li class="fontSize">16</li>
+                        <li class="fontSize">18</li>
+                        <li class="fontSize">20</li>
+                        <li class="fontSize">22</li>
+                        <li class="fontSize">24</li>
+                        <li class="fontSize">26</li>
+                        <li class="fontSize">28</li>
+                        <li class="fontSize">36</li>
+                        <li class="fontSize">48</li>
+                        <li class="fontSize">72</li>
+                    </ul>
+                </div>
+            </div>
+            <input type="button" value="确定" id="confirm"/>
+        </div>
+    </div>
+    <script src="js/bundle.min.js"></script>
+</body>
+</html>
